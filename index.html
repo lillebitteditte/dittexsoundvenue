@@ -1,56 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-  <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-  <title>Hello World!</title>
-
-  <!-- The website stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
-
-  <!-- The website JavaScript file -->
-  <script src="/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditte Marie's Y2K Video Reel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-  <div class="wrapper">
-    <div class="content" role="main">
-      <h1 class="title">Oh hi website!</h1>
-      <img src="/cool-website.svg" class="illustration" alt="cool website" />
-      <div class="instructions">
-        <p>
-          Fork <a href="https://github.com/glitchdotcom/website-to-compute">this project</a> and open it in a GitHub Codespace.
-        </p>
-        <p> Follow the steps in the README to deploy your new website to Fastly in a few steps!
-        </p>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-      </div>
+    <main class="main-ui-window">
+        
+        <header class="site-header">
+            <h1>DITTE MARIE</h1>
+            <p>Skaber soundtracks til øjet</p>
+        </header>
 
-      <footer class="footer">
-        <div>
-          <a class="remix" href="https://github.com/glitchdotcom/website-to-compute">🚧 Get your own site</a>
+        <div class="content-window">
+            <div class="window-title-bar">
+                <span class="window-title">bio.txt</span>
+                <div class="window-buttons"><span>_</span><span>❐</span><span>X</span></div>
+            </div>
+            <div class="window-content about-me">
+                <p>Mine reels startede som en ret simpel idé: at anbefale musik, jeg elsker, og samtidig komme over the cringe ved at poste. Nu og her er det mest af alt en kreativ legeplads, en digital skitsebog til at prøve koncepter af i et format, der er hurtigt, ærligt og har en personlig vinkel.
+
+Min erfaring går langt udover mine baby steps som content creator, men er en værdifuld sum af at have arbejdet på større produktioner med stramme deadlines og på mindre hold, hvor jeg selv stod for alt fra idé til færdigt produkt.</p>
+                <p>Jeg er nysgerrig af natur, struktureret af nødvendighed, hele tiden på jagt efter ny musik, kunstnere og deres historier og jeg ville intet mindre end elske at folde mine idéer, interesser og skills ud hos jer. </p>
+            </div>
         </div>
-      </footer>
-    </div>
-  </div>
-</body>
 
+        <div class="content-window">
+            <div class="window-title-bar">
+                <span class="window-title">my_reel.mov</span>
+                <div class="window-buttons"><span>_</span><span>❐</span><span>X</span></div>
+            </div>
+            <div class="window-content">
+                <div class="portfolio-grid">
+                
+                   <div class="video-player-frame">
+                        <video poster="/public/video1.png" src="/public/video1-vid.MP4" loop preload="metadata"></video>
+                        <div class="player-controls">
+                            <div class="button-icon play">▶</div>
+                        </div>
+                    </div>
+    
+                 <div class="video-player-frame">
+                        <video poster="/public/video2.png" src="/public/video2-vid.MP4" loop preload="metadata"></video>
+                        <div class="player-controls">
+                            <div class="button-icon play">▶</div>
+                        </div>
+                    </div>
+
+                  <div class="video-player-frame">
+                        <video poster="/public/video3.png" src="/public/c3576bb25e7a47ddae61be67f0d0d1cd.MP4" loop preload="metadata"></video>
+                        <div class="player-controls">
+                            <div class="button-icon play">▶</div>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <button id="toggleResume" class="y2k-button">I må også se mit CV</button>
+            <div id="resumeContent" class="resume-content-box hidden">
+
+
+                <hr>
+
+                <h4>ERFARING</h4>
+
+  <p>
+               <p class="entry-header">
+    <strong class="resume-headline">SEP 2025 - OKT 2025 | KLIPPEASSISTENT</strong><br>
+    <em>GODT MEDIA</em>
+</p>
+<ul>
+                    <li>Projektansættelse der starter i morgen, primært aflevering af program til HBO</li>
+                    
+                </ul>
+                </p>
+
+                <p>
+               <p class="entry-header">
+    <strong class="resume-headline">JUN 2025 - AUG 2025 | KLIPPEASSISTENT</strong><br>
+    <em>BBC STUDIOS NORDIC PRODUCTIONS</em>
+</p>
+                </p>
+                <ul>
+                    <li>Aflevering af programmer til HBO, DR og Viaplay</li>
+                    <li>Grafik til Hestepigen Fra Helvede og Klassen</li>
+                    <li>Foto på storskærmsproduktionen på Tinderbox og reportageprogram</li>
+                    <li>Gennemsyn af programmer, grouping af materiale og assistering med teknik, ingest, eksport etc.</li>
+                </ul>
+
+                <p> <p class="entry-header">
+                    <strong class="resume-headline">AUG 2024 - OKT 2024 | DIGITAL PRAKTIKANT</strong><br>
+                    <em>LIQUIDMINDS</em>
+                    </p>
+                </p>
+                <ul>
+                    <li>Udviklede læringsplatformen voresfisk.dk til grund- og mellemtrinnet</li>
+                    <li>Producerede platformens animationer i After Effects</li>
+                    <li>Skabte interaktive elementer (opgaver, ordbog, quiz) med JavaScript</li>
+                </ul>
+
+                <p><p class="entry-header">
+                    <strong class="resume-headline">2023 - 2024 | FILM- OG TV-PRODUKTIONSTEKNIKER</strong><br>
+                    <em>FEMALE INVEST</em> </p>
+                </p>
+                <ul>
+                    <li>Still- og videofotograf på kampagner, reklamer og læringsmateriale</li>
+                    <li>Redigering og klip af videoer til læringsplatform & ansvarlig for videoer til TikTok</li>
+                    <li>Udviklede grafikpakke med ikoner og animationer</li>
+                </ul>
+
+                <p> <p class="entry-header">
+                    <strong class="resume-headline">2020 - 2022 | FILM- OG TV-PRODUKTIONSTEKNIKER</strong><br>
+                    <em>TV2 KOSMOPOL</em> </p>
+                </p>
+                <ul>
+                    <li>Fotograf hos SoMe-afdelingen med fokus på en klart defineret, ung målgruppe</li>
+                    <li>Live- og reportagefotograf</li>
+                    <li>Konceptudvikling, klip og grafik på tværs af produktioner</li>
+                </ul>
+
+                <p> <p class="entry-header">
+                    <strong class="resume-headline">2018 - 2020 | FILM- OG TV-PRODUKTIONSTEKNIKER</strong><br>
+                    <em>MADE BY US</em>
+                    </p>
+                </p>
+                <ul>
+                    <li>Fotograf, klipper, manuskriptforfatter og projektleder</li>
+                    <li>Opgaver som speaker, caster og fotoassistent</li>
+                </ul>
+
+                <p>
+                    <p class="entry-header">
+                    <strong class="resume-headline">2019 - 2021 (Projektansættelser) | KLIPPEASSISTENT</strong><br>
+                    <em>BACON CPH</em> </p>
+                </p>
+                <ul>
+                    <li>Transcoding af filer, organisering af Avid projekter og eksport af grafik</li>
+                    <li>Digitalisering af VHS-bånd og DVD’er</li>
+                    <li>Research og kommunikation med medvirkende</li>
+                </ul>
+
+                <hr>
+
+                <h4>UDDANNELSE</h4>
+                <p> 
+                    <strong class="resume-headline">2022 - 2025 | DATAMATIKER</strong><br>
+                    <em>KEA - Københavns Erhvervsakademi</em>
+                </p>
+                <p>
+                    <strong class="resume-headline">JAN 2024 - MAJ 2024 | CREATIVE COMPUTING (Udveksling)</strong><br>
+                    <em>SOUTH EAST TECHNOLOGICAL UNIVERSITY, IRLAND</em>
+                </p>
+                <p>
+                    <strong class="resume-headline">2018 - 2022 | FILM- OG TV-PRODUKTIONSTEKNIKER</strong><br>
+                    <em>NEXT UDDANNELSE KØBENHAVN</em>
+                </p>
+            </div>
+        </div> 
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>

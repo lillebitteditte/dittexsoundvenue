@@ -1,133 +1,254 @@
-/* A set of default styles */
 :root {
-  /* Generic sizing for the page */
-  --wrapper-height: 100vh;
-
-  /* Fonts for different elements */
-  --font-family: sans-serif;
-  --font-family-list: monospace;
-
-  /* Colors you'll see cascade through the elements */
-  --color-bg: #99ddff; /* Used for the page body background */
-  --color-bg-alt: #33b1ff; /* Used for social icons on hover */
-  --color-text-main: #004099; /* List text ann social icons on hover */
-  --color-primary: #006aff; /* Headers and borders */
-  --color-highlight: #e7f7fe; /* Highlights */
+    --y2k-pink: #FF66CC;
+    --y2k-purple: #9D77FF;
+    --y2k-blue: #66CCFF;
+    --y2k-dark-purple: #2E235D;
+    --y2k-bg-light: #FCEFF9;
+    --y2k-white: #FFFFFF;
 }
 
-/* Basic page style resets */
-* {
-  box-sizing: border-box;
-}
-[hidden] {
-  display: none !important;
-}
-
-/* Page structure */
 body {
-  font-family: var(--font-family);
-  background-color: var(--color-bg);
-  text-align: center;
-  margin: 0;
-  font-size:large;
-}
-/* Page structure */
-.wrapper {
-  min-height: var(--wrapper-height);
-  display: grid;
-  place-items: center;
-  margin: 0;
-  padding:1rem 2rem;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    background-color: var(--y2k-dark-purple);
+    background-image: linear-gradient(to bottom right, #4c3a8c, #2E235D);
+    padding: 20px;
+    margin: 0;
+    
+    min-height: 100vh;
 }
 
-.illustration {
-  max-width:30%;
-  margin:1rem 0 2rem 0;
-  animation: 1s ease-out 0s 1 spinIn;
-}
-@keyframes spinIn {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.illustration-404 {
-  max-width:30%;
-  margin:1rem 0 2rem 0;
-  animation: 1s ease-out 0s 1 spinUp;
-  filter: grayscale(100%);
-  animation-fill-mode: forwards;
-} 
-@keyframes spinUp {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
+
+.main-ui-window {
+    max-width: 950px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #F9CFF2, #E6D8FF);
+    border-radius: 40px 40px 80px 40px;
+    border: 4px solid var(--y2k-pink);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.8);
+    padding: 20px 30px;
 }
 
-/* Typography */
-p {
-  margin: 1rem;
-  line-height: 1.3em;
+.site-header {
+    text-align: center;
+    
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: var(--color-text-main);
-}
+
 h1 {
-  display: inline-flex;
-  color: var(--color-primary);
-  justify-content: center;
+    padding: 0px;
 }
-/* Link styles */
-a:link,
-a:visited {
-  text-decoration: none;
-  border-bottom: 2px solid var(--color-primary);
-  color: var(--color-primary);
-  transition: background 0.2s linear;
-  font-weight: bold;
+.site-header h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--y2k-pink);
+    font-size: 2em;
+    text-shadow: 2px 2px var(--y2k-purple);
+    margin-bottom: 0; 
 }
-a:hover,
-a:active,
-a:focus {
-  background: var(--color-primary);
-  color:var(--color-highlight);
+.site-header p {
+    margin-top: 0;
+    font-size: 1em;
+    color: var(--y2k-dark-purple);
 }
-/* Navigation grid */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem auto 0;
-  padding: 1.5rem 0 0.5rem 0;
-  width: 100%;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: flex-end;
+
+.content-window {
+    background-color: #EADFFB;
+    border: 2px solid var(--y2k-dark-purple);
+    box-shadow: 5px 5px 0px var(--y2k-purple);
+    margin-bottom: 30px;
 }
-a.remix {
-  background: var(--color-bg-alt);
-  color:var(--color-highlight);
-  border: 2px solid var(--color-highlight);
-  border-radius: 5px;
-  padding:0.5rem;
-  font-weight:bold;
+.window-title-bar {
+    background: linear-gradient(to right, var(--y2k-purple), var(--y2k-pink));
+    color: var(--y2k-white);
+    padding: 5px 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--y2k-dark-purple);
 }
-a.remix:hover {
-  background: var(--color-primary);
-  color:var(--color-highlight);
+.window-buttons span {
+    display: inline-block;
+    width: 12px; height: 12px;
+    border: 1px solid var(--y2k-dark-purple);
+    margin-left: 3px;
+    background: var(--y2k-bg-light);
+    text-align: center; line-height: 10px;
+    font-size: 10px; color: var(--y2k-dark-purple);
+}
+.window-content {
+    padding: 20px;
+    color: var(--y2k-dark-purple);
+}
+.about-me p {
+    font-size: 0.8em;
+    line-height: 1.6;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.video-player-frame {
+    background: linear-gradient(135deg, var(--y2k-pink), #FFA0DA);
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 0 8px rgba(255, 255, 255, 0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+.video-player-frame:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), inset 0 0 8px rgba(255, 255, 255, 0.7);
+}
+.video-player-frame video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid var(--y2k-dark-purple);
+    display: block;
+    pointer-events: none;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.button-icon.play {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+    background: linear-gradient(to bottom, var(--y2k-purple) 0%, #8A5BFF 100%);
+    box-shadow: 
+        inset 0 2px 2px rgba(255, 255, 255, 0.4),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.3),
+        0 4px 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid #7F4FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+     cursor: pointer;
+}
+
+.video-player-frame:hover .button-icon.play {
+    transform: scale(1.1);
+}
+
+.resume-section { text-align: center; }
+
+.y2k-button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    color: var(--y2k-dark-purple);
+    background: linear-gradient(to bottom, #FFFFFF, #E0E0E0);
+    border: 2px solid var(--y2k-purple);
+    border-radius: 30px;
+    padding: 12px 25px;
+    box-shadow: 0 4px 0 var(--y2k-purple);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+.y2k-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--y2k-purple);
+}
+
+.resume-content-box {
+    text-align: left;
+    background-color: var(--y2k-bg-light);
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: 2px dashed var(--y2k-pink);
+}
+
+.resume-content-box.hidden {
+    display: none;
+}
+
+.resume-content-box strong.resume-headline {
+    color: var(--y2k-pink);
+    /* We removed display:block and margin-bottom to pull the text up */
+}
+
+.resume-content-box ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.resume-content-box ul li::before {
+    content: '💖 ';
+    color: var(--y2k-pink);
+    margin-right: 8px;
+    font-size: 0.8em;
+    vertical-align: middle;
+    
+}
+
+li {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 0.8rem;
+}
+
+
+/* --- Animeret Ikoner til Hovedoverskrift --- */
+
+/* 1. Gør plads til ikonerne ved siden af H1 */
+.site-header h1 {
+    position: relative; /* Nødvendig for at positionere ikonerne */
+    display: inline-block; /* Sørger for at containeren kun er så bred som teksten */
+    padding: 0 40px; /* Giver plads på hver side af teksten til stjernerne */
+}
+
+/* 2. Opretter og styler selve stjerne-ikonerne */
+.site-header h1::before,
+.site-header h1::after {
+    content: '✨'; /* Her kan du ændre ikonet, f.eks. til '✧' eller '♫' */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7em; /* Størrelsen på ikonet */
+    color: var(--y2k-pink);
+
+    /* Her starter animationen! */
+    animation: sparkle-animation 2.5s infinite linear;
+}
+
+/* 3. Positionerer ikonerne på hver sin side */
+.site-header h1::before {
+    left: 0;
+}
+
+.site-header h1::after {
+    right: 0;
+    animation-delay: -1.25s; /* Gør, at de animerer forskudt af hinanden */
+}
+
+/* 4. Selve animationen, der får dem til at rotere og gløde */
+@keyframes sparkle-animation {
+    0% {
+        transform: translateY(-50%) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-50%) rotate(180deg) scale(1.2);
+        opacity: 1;
+        text-shadow: 0 0 10px var(--y2k-pink); /* Gløde-effekt */
+    }
+    100% {
+        transform: translateY(-50%) rotate(360deg) scale(1);
+        opacity: 0.7;
+    }
 }
